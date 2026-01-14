@@ -165,63 +165,63 @@ const Icons = {
 
 // Influencer data
 const influencers = [
-  { name: "Sarah M.", handle: "@sarahwellness", followers: "125K", niche: "Fitness" },
-  { name: "Mike T.", handle: "@mikefit", followers: "89K", niche: "Men's Health" },
+  { name: "Sarah M.", handle: "@sarahwellness", followers: "125K", niche: "Women's Health" },
+  { name: "Lisa T.", handle: "@lisathrives", followers: "89K", niche: "Menopause" },
   { name: "Jessica L.", handle: "@jesslifestyle", followers: "210K", niche: "Lifestyle" },
-  { name: "David R.", handle: "@davidruns", followers: "67K", niche: "Fitness" },
+  { name: "Michelle R.", handle: "@michellerenewal", followers: "67K", niche: "Perimenopause" },
   { name: "Amanda K.", handle: "@amandawellness", followers: "156K", niche: "Women's Health" },
-  { name: "Chris P.", handle: "@chrisperformance", followers: "94K", niche: "Performance" },
-  { name: "Emily S.", handle: "@emilystrong", followers: "178K", niche: "Strength" },
-  { name: "Ryan B.", handle: "@ryanbalanced", followers: "52K", niche: "Wellness" },
+  { name: "Karen P.", handle: "@karenpower", followers: "94K", niche: "Wellness" },
+  { name: "Emily S.", handle: "@emilystrong", followers: "178K", niche: "Hormones" },
+  { name: "Rachel B.", handle: "@rachelbalanced", followers: "52K", niche: "Self-Care" },
 ]
 
 const testimonials = [
   {
-    quote: "Working with Fountain Vitality was seamless. They gave me full creative control and the content performed incredibly well.",
+    quote: "Fountain trusted me to share my real menopause journey. No scripts, no awkward talking points—just honest content that resonated with my audience.",
     author: "@sarahwellness"
   },
   {
-    quote: "I've worked with a lot of brands, but FV actually cares about their partners. Quick responses, fair pay, and a product I believe in.",
-    author: "@mikefit"
+    quote: "As someone going through perimenopause, partnering with Fountain felt natural. They actually care about helping women feel better, not just selling.",
+    author: "@lisathrives"
   },
   {
-    quote: "My audience loved the content. It felt authentic because it IS authentic—this brand genuinely helps people.",
+    quote: "The creative freedom was incredible. I shared my story my way, and my community responded because it felt real—because it IS real.",
     author: "@jesslifestyle"
   }
 ]
 
 const faqs = [
   {
-    question: "Do I need to be a Fountain Vitality patient?",
-    answer: "No! While we love when partners have personal experience with hormone health, it's not required. We'll provide all the information you need to create informed, authentic content."
+    question: "Do I need to be a Fountain patient?",
+    answer: "No! While we love when partners have personal experience with hormone health, it's not required. If you're not personally going through the Fountain process, you may speak generally about Fountain as a solution. We'll guide you on appropriate phrasing."
   },
   {
     question: "How much creative freedom do I have?",
-    answer: "A lot. We provide key messages and guidelines, but you know your audience best. We want content that feels natural to your style—not scripted ads."
+    answer: "A lot. We provide key messages and guidelines, but you know your audience best. We want content that feels human and approachable—not overly polished, not overly salesy. Simple, clear, and natural is best."
   },
   {
     question: "What platforms do you work with?",
-    answer: "We partner with creators on Instagram, TikTok, YouTube, and Facebook. We're open to other platforms too—just let us know!"
+    answer: "This collaboration runs on TikTok and/or Facebook. Fountain may repost your content on our own social channels and may tag you when doing so."
   },
   {
-    question: "How do I get paid?",
-    answer: "We pay $100 per post via PayPal, Venmo, or direct deposit—your choice. Payment is sent within 7 days of your content going live."
+    question: "What type of content should I create?",
+    answer: "Short-form vertical videos (9:16), ideally 1-2 minutes long. iPhone only, talking-to-camera style. Clip-on mic encouraged if available. Share your real menopause or perimenopause experience in an honest, relatable way."
   },
   {
-    question: "Can I work with other brands in the health space?",
-    answer: "Yes, we don't require exclusivity. We just ask that you don't promote direct competitors within 30 days of our campaign."
+    question: "What are the required talking points?",
+    answer: "You'll mention your custom discount link on camera, highlight the $32 evaluation with a provider who listens, and mention that treatment may include progesterone, testosterone, and estrogen. We'll provide all the details!"
   },
   {
-    question: "What if I have a smaller following?",
-    answer: "We care more about engagement and authenticity than follower count. If your audience trusts you and engages with your content, we want to hear from you."
+    question: "Do I need approval before filming?",
+    answer: "Yes! Before filming, submit 3-4 content ideas with hook options. We'll review and give feedback on hooks and overall concept direction. Once approved, you're good to film. This avoids reshoots!"
   },
   {
-    question: "How long does the partnership last?",
-    answer: "We start with individual campaigns, but we love building long-term relationships with creators who are a great fit. Many of our partners have been with us for 6+ months."
+    question: "How many revision rounds are there?",
+    answer: "We may request up to 1-2 rounds of edits if needed for clarity, compliance, or alignment. Feedback will be specific and respectful of your voice. The goal is minimal revisions, not perfection."
   },
   {
     question: "What kind of content performs best?",
-    answer: "Educational content, personal stories, myth-busting, and 'day in my life' formats tend to resonate well. But we're open to your ideas!"
+    answer: "Personal stories about your menopause/perimenopause journey, day-in-the-life reflections, 'things I wish I knew earlier,' tips based on your experience, and why most HRT clinics don't offer testosterone but Fountain does."
   }
 ]
 
@@ -285,7 +285,7 @@ function App() {
         <div className="header-container">
           <div className="logo">
             <span className="logo-icon">◈</span>
-            <span className="logo-text">Fountain Vitality</span>
+            <span className="logo-text">Fountain</span>
           </div>
           <nav className="nav">
             <button onClick={() => scrollToSection('benefits')}>Why Partner</button>
@@ -308,21 +308,21 @@ function App() {
         </div>
         <div className="hero-content">
           <AnimatedSection>
-            <span className="hero-badge">Influencer Partnership Program</span>
+            <span className="hero-badge">Creator Collaboration Program</span>
           </AnimatedSection>
           <AnimatedSection delay={100}>
-            <h1 className="hero-title">Partner With a Brand<br />That Actually Cares</h1>
+            <h1 className="hero-title">Share Your Story.<br />Help Women Thrive.</h1>
           </AnimatedSection>
           <AnimatedSection delay={200}>
             <p className="hero-subtitle">
-              Help your audience discover hormone health solutions that genuinely transform lives. 
-              Create authentic content with a mission-driven brand that values you.
+              Create honest, relatable content about menopause and perimenopause. 
+              Partner with a brand that's helping women reclaim their energy, clarity, and quality of life.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={300}>
             <div className="hero-cta">
               <button className="btn btn-primary" onClick={() => scrollToSection('contact')}>
-                Become a Partner
+                Become a Creator Partner
                 <Icons.ArrowDown />
               </button>
               <button className="btn btn-secondary" onClick={() => scrollToSection('benefits')}>
@@ -342,11 +342,11 @@ function App() {
         <div className="container">
           <AnimatedSection>
             <div className="section-header">
-              <span className="section-label">Why Partner With Us</span>
-              <h2 className="section-title">A Partnership Built on Trust</h2>
+              <span className="section-label">Why Create With Us</span>
+              <h2 className="section-title">Real Stories. Real Impact.</h2>
               <p className="section-description">
-                We're not just another brand looking for posts. We're building meaningful relationships 
-                with creators who share our passion for helping people.
+                We're looking for creators who want to share authentic menopause and perimenopause experiences—
+                not scripted ads. Your voice, your story, your way.
               </p>
             </div>
           </AnimatedSection>
@@ -355,29 +355,29 @@ function App() {
             <AnimatedSection delay={100}>
               <div className="benefit-card">
                 <div className="benefit-icon"><Icons.Creative /></div>
-                <h3>Creative Freedom</h3>
-                <p>We trust our partners. You know your audience—create content that feels authentic to you.</p>
+                <h3>Full Creative Control</h3>
+                <p>Submit your content ideas and hooks for approval, then create in your authentic style. We trust you to know what resonates with your audience.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="benefit-card">
                 <div className="benefit-icon"><Icons.Team /></div>
-                <h3>Dynamic Team</h3>
-                <p>Work with a collaborative, responsive team that values your input and ideas.</p>
+                <h3>Collaborative Process</h3>
+                <p>We review concepts before filming to avoid reshoots. Light feedback, minimal revisions—the goal isn't perfection, it's authenticity.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={300}>
               <div className="benefit-card">
                 <div className="benefit-icon"><Icons.Heart /></div>
-                <h3>Mission-Driven Brand</h3>
-                <p>Promote something that genuinely helps people feel better and live fuller lives.</p>
+                <h3>Meaningful Content</h3>
+                <p>Help women discover hormone health solutions that actually work. 99% of Fountain patients use testosterone—something most clinics don't offer.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={400}>
               <div className="benefit-card">
                 <div className="benefit-icon"><Icons.Lightning /></div>
-                <h3>Simple Process</h3>
-                <p>Clear expectations, fast communication, and on-time payments. Always.</p>
+                <h3>Simple & Supported</h3>
+                <p>We provide all the info you need about Fountain's process, hormones, and key talking points. Ask questions early, share ideas freely.</p>
               </div>
             </AnimatedSection>
           </div>
@@ -389,8 +389,8 @@ function App() {
         <div className="container">
           <AnimatedSection>
             <div className="section-header">
-              <span className="section-label">What We Stand For</span>
-              <h2 className="section-title">Our Core Values</h2>
+              <span className="section-label">What Makes Fountain Different</span>
+              <h2 className="section-title">Why Women Choose Us</h2>
             </div>
           </AnimatedSection>
           
@@ -398,30 +398,30 @@ function App() {
             <AnimatedSection delay={100}>
               <div className="value-card">
                 <div className="value-icon"><Icons.Patient /></div>
-                <h3>Patient-First Care</h3>
+                <h3>Testosterone Included</h3>
                 <p>
-                  Everything we do starts with the patient. We're not here to sell—we're here 
-                  to help people reclaim their energy, clarity, and quality of life.
+                  99% of our patients use testosterone—essential for sex drive, motivation, bone health, and muscle retention. 
+                  Most HRT clinics don't offer it. We built our business specifically to provide it.
                 </p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="value-card">
                 <div className="value-icon"><Icons.Access /></div>
-                <h3>Accessibility</h3>
+                <h3>The 12-Week Promise</h3>
                 <p>
-                  Hormone health shouldn't be complicated or out of reach. We make it simple 
-                  and affordable for everyone.
+                  Biweekly check-ins with personalized hormone adjustments. Within 12 weeks, every patient 
+                  reaches their ideal dose—one pill and one click per day.
                 </p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={300}>
               <div className="value-card">
                 <div className="value-icon"><Icons.Support /></div>
-                <h3>Support for Those in Need</h3>
+                <h3>Custom-Tailored Care</h3>
                 <p>
-                  We believe everyone deserves to feel their best. Our mission is to remove 
-                  barriers and provide real solutions.
+                  Not one-size-fits-all. Treatments may include testosterone, estrogen, progesterone, 
+                  and vaginal estrogen—adjusted specifically for perimenopausal or menopausal needs.
                 </p>
               </div>
             </AnimatedSection>
@@ -434,10 +434,10 @@ function App() {
         <div className="container">
           <AnimatedSection>
             <div className="section-header">
-              <span className="section-label">Our Partners</span>
-              <h2 className="section-title">Creators We've Worked With</h2>
+              <span className="section-label">Our Creator Community</span>
+              <h2 className="section-title">Women Sharing Real Stories</h2>
               <p className="section-description">
-                We've partnered with amazing creators across health, wellness, and lifestyle spaces.
+                We partner with creators in women's health, wellness, and lifestyle who share authentic menopause and perimenopause experiences.
               </p>
             </div>
           </AnimatedSection>
@@ -502,7 +502,7 @@ function App() {
         <div className="container">
           <AnimatedSection>
             <div className="section-header">
-              <span className="section-label">Compensation & Details</span>
+              <span className="section-label">Collaboration Details</span>
               <h2 className="section-title">What You Get</h2>
             </div>
           </AnimatedSection>
@@ -511,12 +511,12 @@ function App() {
             <AnimatedSection delay={100}>
               <div className="compensation-card main-card">
                 <div className="compensation-icon"><Icons.Dollar /></div>
-                <div className="compensation-amount">$100</div>
-                <div className="compensation-per">per post</div>
+                <div className="compensation-amount">Paid</div>
+                <div className="compensation-per">collaboration</div>
                 <ul className="compensation-details">
-                  <li><Icons.Check /> Paid within 7 days of content going live</li>
-                  <li><Icons.Check /> Bonuses available for high-performing content</li>
-                  <li><Icons.Check /> PayPal, Venmo, or direct deposit</li>
+                  <li><Icons.Check /> Your own custom discount link (fountain.net/yourname)</li>
+                  <li><Icons.Check /> Content may be reposted on Fountain's channels</li>
+                  <li><Icons.Check /> Long-term partnership opportunities</li>
                 </ul>
               </div>
             </AnimatedSection>
@@ -525,13 +525,13 @@ function App() {
               <div className="compensation-card perks-card">
                 <div className="perks-header">
                   <Icons.Gift />
-                  <h3>Partnership Perks</h3>
+                  <h3>Content Format</h3>
                 </div>
                 <ul className="perks-list">
-                  <li>Complimentary consultation with our medical team</li>
-                  <li>Early access to new offerings and campaigns</li>
-                  <li>Feature opportunities on our brand channels</li>
-                  <li>Long-term partnership opportunities for top performers</li>
+                  <li>Short-form vertical video (9:16 ratio)</li>
+                  <li>1-2 minutes ideal length</li>
+                  <li>iPhone only, talking-to-camera style</li>
+                  <li>Clip-on mic encouraged if available</li>
                 </ul>
               </div>
             </AnimatedSection>
@@ -540,13 +540,13 @@ function App() {
               <div className="compensation-card looking-card">
                 <div className="looking-header">
                   <Icons.Star />
-                  <h3>What We're Looking For</h3>
+                  <h3>Ideal Creators</h3>
                 </div>
                 <ul className="looking-list">
-                  <li>Creators in health, wellness, fitness, or lifestyle spaces</li>
-                  <li>Authentic voices who connect with their audience</li>
-                  <li>Minimum 5K followers (engagement matters more than size)</li>
-                  <li>Passion for helping others feel their best</li>
+                  <li>Women in health, wellness, or lifestyle spaces</li>
+                  <li>Authentic voices sharing real experiences</li>
+                  <li>Personal connection to menopause or perimenopause topics</li>
+                  <li>Conversational, honest, natural delivery style</li>
                 </ul>
               </div>
             </AnimatedSection>
@@ -559,10 +559,11 @@ function App() {
         <div className="container">
           <AnimatedSection>
             <div className="section-header">
-              <span className="section-label">Creative Guidelines</span>
-              <h2 className="section-title">Simple, Clear Expectations</h2>
+              <span className="section-label">Content Guidelines</span>
+              <h2 className="section-title">Tone & Style</h2>
               <p className="section-description">
-                Beyond these basics, you have full creative freedom. We trust you to know what resonates with your audience.
+                Content should feel human and approachable—not overly polished, not overly salesy. 
+                A real person sharing something helpful, not a scripted ad.
               </p>
             </div>
           </AnimatedSection>
@@ -570,22 +571,24 @@ function App() {
           <div className="guidelines-grid">
             <AnimatedSection delay={100}>
               <div className="guideline-card dos">
-                <h3>The Do's</h3>
+                <h3>What Works</h3>
                 <ul>
-                  <li><span className="icon-check"><Icons.Check /></span> Be authentic—share your genuine perspective</li>
-                  <li><span className="icon-check"><Icons.Check /></span> Educate your audience about hormone health</li>
-                  <li><span className="icon-check"><Icons.Check /></span> Include FTC-required disclosure (#ad, #partner)</li>
-                  <li><span className="icon-check"><Icons.Check /></span> Have fun and be creative!</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Share personal tips and what's helped you</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Frame things as "what worked for me"</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Speak from your own experience</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Conversational, honest, natural delivery</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Clear beginning, middle, and end</li>
                 </ul>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="guideline-card donts">
-                <h3>The Don'ts</h3>
+                <h3>Please Avoid</h3>
                 <ul>
-                  <li><span className="icon-x"><Icons.X /></span> No sexually explicit or suggestive content</li>
-                  <li><span className="icon-x"><Icons.X /></span> No guarantees or unrealistic promises</li>
-                  <li><span className="icon-x"><Icons.X /></span> No negative comparisons to competitors</li>
+                  <li><span className="icon-x"><Icons.X /></span> Medical advice or diagnoses</li>
+                  <li><span className="icon-x"><Icons.X /></span> Weight-loss promises</li>
+                  <li><span className="icon-x"><Icons.X /></span> Speaking as a medical expert</li>
+                  <li><span className="icon-x"><Icons.X /></span> Broad statements like "every woman will experience this"</li>
                 </ul>
               </div>
             </AnimatedSection>
@@ -598,8 +601,8 @@ function App() {
         <div className="container">
           <AnimatedSection>
             <div className="section-header">
-              <span className="section-label">How It Works</span>
-              <h2 className="section-title">Four Simple Steps</h2>
+              <span className="section-label">The Process</span>
+              <h2 className="section-title">How Collaboration Works</h2>
             </div>
           </AnimatedSection>
 
@@ -607,29 +610,29 @@ function App() {
             <AnimatedSection delay={100}>
               <div className="process-step">
                 <div className="step-number">1</div>
-                <h3>Apply</h3>
-                <p>Fill out our quick partnership form</p>
+                <h3>Submit Ideas</h3>
+                <p>Send 3-4 content ideas with hook options for approval</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="process-step">
                 <div className="step-number">2</div>
-                <h3>Connect</h3>
-                <p>We'll reach out to chat about fit and ideas</p>
+                <h3>Get Feedback</h3>
+                <p>We review hooks and concept direction, then approve</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={300}>
               <div className="process-step">
                 <div className="step-number">3</div>
-                <h3>Create</h3>
-                <p>Make awesome content with full creative control</p>
+                <h3>Create Content</h3>
+                <p>Film your authentic video with full creative control</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={400}>
               <div className="process-step">
                 <div className="step-number">4</div>
-                <h3>Get Paid</h3>
-                <p>Receive payment within 7 days of posting</p>
+                <h3>Post & Share</h3>
+                <p>Publish on TikTok/Facebook with your custom link</p>
               </div>
             </AnimatedSection>
           </div>
@@ -662,9 +665,9 @@ function App() {
           <AnimatedSection>
             <div className="section-header">
               <span className="section-label">Get Started</span>
-              <h2 className="section-title">Ready to Partner?</h2>
+              <h2 className="section-title">Ready to Create?</h2>
               <p className="section-description">
-                We'd love to hear from you. Reach out and let's talk about working together.
+                Share your story. Help women discover hormone health solutions. Let's collaborate.
               </p>
             </div>
           </AnimatedSection>
@@ -770,9 +773,9 @@ function App() {
             <div className="footer-brand">
               <div className="logo">
                 <span className="logo-icon">◈</span>
-                <span className="logo-text">Fountain Vitality</span>
+                <span className="logo-text">Fountain</span>
               </div>
-              <p>Helping people discover hormone health solutions and live their best lives.</p>
+              <p>Helping women reclaim their energy, clarity, and quality of life through personalized hormone therapy.</p>
             </div>
             <div className="footer-links">
               <h4>Company</h4>
