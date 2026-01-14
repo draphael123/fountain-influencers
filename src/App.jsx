@@ -280,13 +280,6 @@ function App() {
     }
     return false
   })
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    instagram: '',
-    followers: '',
-    message: ''
-  })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -307,18 +300,6 @@ function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const handleFormChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const subject = encodeURIComponent('Partnership Inquiry')
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nInstagram: ${formData.instagram}\nFollowers: ${formData.followers}\n\nMessage:\n${formData.message}`
-    )
-    window.location.href = `mailto:partnerships@fountainvitality.com?subject=${subject}&body=${body}`
-  }
 
   return (
     <div className="app">
@@ -715,97 +696,27 @@ function App() {
             </div>
           </AnimatedSection>
 
-          <div className="contact-layout">
-            <AnimatedSection delay={100}>
-              <form className="contact-form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="name">Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={formData.name}
-                    onChange={handleFormChange}
-                    placeholder="Your name"
-                    required 
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    value={formData.email}
-                    onChange={handleFormChange}
-                    placeholder="your@email.com"
-                    required 
-                  />
-                </div>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="instagram">Instagram Handle</label>
-                    <input 
-                      type="text" 
-                      id="instagram" 
-                      name="instagram" 
-                      value={formData.instagram}
-                      onChange={handleFormChange}
-                      placeholder="@yourhandle"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="followers">Follower Count</label>
-                    <input 
-                      type="text" 
-                      id="followers" 
-                      name="followers" 
-                      value={formData.followers}
-                      onChange={handleFormChange}
-                      placeholder="e.g. 50K"
-                    />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message">Message</label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    value={formData.message}
-                    onChange={handleFormChange}
-                    placeholder="Tell us about yourself and why you'd like to partner..."
-                    rows="4"
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary btn-full">
-                  <Icons.Send />
-                  Send Message
-                </button>
-              </form>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="contact-info">
-                <div className="contact-method">
-                  <div className="contact-icon"><Icons.Mail /></div>
-                  <div className="contact-details">
-                    <h4>Email Us</h4>
-                    <a href="mailto:partnerships@fountainvitality.com">partnerships@fountainvitality.com</a>
-                  </div>
-                </div>
-                <div className="contact-method">
-                  <div className="contact-icon"><Icons.Instagram /></div>
-                  <div className="contact-details">
-                    <h4>DM Us on Instagram</h4>
-                    <a href="https://instagram.com/fountainvitality" target="_blank" rel="noopener noreferrer">@fountainvitality</a>
-                  </div>
-                </div>
-                <div className="contact-note">
-                  <p>We typically respond within 24-48 hours. Looking forward to connecting!</p>
+          <AnimatedSection delay={100}>
+            <div className="contact-info-centered">
+              <div className="contact-method">
+                <div className="contact-icon"><Icons.Mail /></div>
+                <div className="contact-details">
+                  <h4>Email Us</h4>
+                  <a href="mailto:aryia@fountain.net">aryia@fountain.net</a>
                 </div>
               </div>
-            </AnimatedSection>
-          </div>
+              <div className="contact-method">
+                <div className="contact-icon"><Icons.Instagram /></div>
+                <div className="contact-details">
+                  <h4>DM Us on Instagram</h4>
+                  <a href="https://instagram.com/fountainvitality" target="_blank" rel="noopener noreferrer">@fountainvitality</a>
+                </div>
+              </div>
+              <div className="contact-note">
+                <p>We typically respond within 24-48 hours. Looking forward to connecting!</p>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
