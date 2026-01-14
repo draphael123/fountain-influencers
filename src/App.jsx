@@ -163,32 +163,6 @@ const Icons = {
   ),
 }
 
-// Influencer data
-const influencers = [
-  { name: "Sarah M.", handle: "@sarahwellness", followers: "125K", niche: "Women's Health" },
-  { name: "Lisa T.", handle: "@lisathrives", followers: "89K", niche: "Menopause" },
-  { name: "Jessica L.", handle: "@jesslifestyle", followers: "210K", niche: "Lifestyle" },
-  { name: "Michelle R.", handle: "@michellerenewal", followers: "67K", niche: "Perimenopause" },
-  { name: "Amanda K.", handle: "@amandawellness", followers: "156K", niche: "Women's Health" },
-  { name: "Karen P.", handle: "@karenpower", followers: "94K", niche: "Wellness" },
-  { name: "Emily S.", handle: "@emilystrong", followers: "178K", niche: "Hormones" },
-  { name: "Rachel B.", handle: "@rachelbalanced", followers: "52K", niche: "Self-Care" },
-]
-
-const testimonials = [
-  {
-    quote: "Fountain trusted me to share my real menopause journey. No scripts, no awkward talking points—just honest content that resonated with my audience.",
-    author: "@sarahwellness"
-  },
-  {
-    quote: "As someone going through perimenopause, partnering with Fountain felt natural. They actually care about helping women feel better, not just selling.",
-    author: "@lisathrives"
-  },
-  {
-    quote: "The creative freedom was incredible. I shared my story my way, and my community responded because it felt real—because it IS real.",
-    author: "@jesslifestyle"
-  }
-]
 
 const faqs = [
   {
@@ -312,7 +286,6 @@ function App() {
           </div>
           <nav className="nav">
             <button onClick={() => scrollToSection('benefits')}>Why Partner</button>
-            <button onClick={() => scrollToSection('social-proof')}>Partners</button>
             <button onClick={() => scrollToSection('compensation')}>Compensation</button>
             <ThemeToggle isDark={isDarkMode} onClick={toggleTheme} />
             <button onClick={() => scrollToSection('contact')} className="nav-cta">Get in Touch</button>
@@ -453,73 +426,6 @@ function App() {
         </div>
       </section>
 
-      {/* Social Proof Section */}
-      <section id="social-proof" className="section section-social-proof">
-        <div className="container">
-          <AnimatedSection>
-            <div className="section-header">
-              <span className="section-label">Our Creator Community</span>
-              <h2 className="section-title">Women Sharing Real Stories</h2>
-              <p className="section-description">
-                We partner with creators in women's health, wellness, and lifestyle who share authentic menopause and perimenopause experiences.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* Stats Bar */}
-          <AnimatedSection delay={100}>
-            <div className="stats-bar">
-              <div className="stat">
-                <span className="stat-number">50+</span>
-                <span className="stat-label">Creator Partners</span>
-              </div>
-              <div className="stat">
-                <span className="stat-number">2M+</span>
-                <span className="stat-label">Total Reach</span>
-              </div>
-              <div className="stat">
-                <span className="stat-number">500K+</span>
-                <span className="stat-label">Engagements</span>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Influencer Grid */}
-          <div className="influencer-grid">
-            {influencers.map((influencer, index) => (
-              <AnimatedSection key={index} delay={150 + (index * 50)}>
-                <div className="influencer-card">
-                  <div className="influencer-avatar">
-                    <span>{influencer.name.charAt(0)}</span>
-                  </div>
-                  <div className="influencer-info">
-                    <h4>{influencer.name}</h4>
-                    <span className="influencer-handle">{influencer.handle}</span>
-                    <span className="influencer-followers">{influencer.followers} followers</span>
-                  </div>
-                  <span className="influencer-niche">{influencer.niche}</span>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          {/* Testimonials */}
-          <AnimatedSection delay={200}>
-            <h3 className="testimonials-title">What Our Partners Say</h3>
-          </AnimatedSection>
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedSection key={index} delay={250 + (index * 100)}>
-                <div className="testimonial-card">
-                  <div className="testimonial-quote-icon"><Icons.Quote /></div>
-                  <p className="testimonial-text">{testimonial.quote}</p>
-                  <span className="testimonial-author">— {testimonial.author}</span>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Compensation Section */}
       <section id="compensation" className="section section-compensation">
