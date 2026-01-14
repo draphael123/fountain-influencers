@@ -571,13 +571,6 @@ function App() {
                   <a href="mailto:aryia@fountain.net">aryia@fountain.net</a>
                 </div>
               </div>
-              <div className="contact-method">
-                <div className="contact-icon"><Icons.Instagram /></div>
-                <div className="contact-details">
-                  <h4>DM Us on Instagram</h4>
-                  <a href="https://instagram.com/fountainvitality" target="_blank" rel="noopener noreferrer">@fountainvitality</a>
-                </div>
-              </div>
               <div className="contact-note">
                 <p>We typically respond within 24-48 hours. Looking forward to connecting!</p>
               </div>
