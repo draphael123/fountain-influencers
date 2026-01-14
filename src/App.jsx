@@ -250,9 +250,8 @@ function App() {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('theme')
       if (saved) return saved === 'dark'
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
     }
-    return false
+    return true // Default to dark mode
   })
 
   useEffect(() => {
