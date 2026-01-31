@@ -178,17 +178,21 @@ const faqs = [
   },
   {
     question: "How much creative freedom do I have?",
-    answer: "A lot. We provide key messages and guidelines, but you know your audience best. We want content that feels human and approachable—not overly polished, not overly salesy. Simple, clear, and natural is best.",
+    answer: "A lot. We provide key messages and guidelines, but you know your audience best. We want content that feels human and approachable, not overly polished, not overly salesy. Simple, clear, and natural is best.",
     popular: true
   },
   {
     question: "What platforms do you work with?",
-    answer: "It depends on the creator—but our team will direct them to the best platforms."
+    answer: "It depends on the creator, but our team will direct them to the best platforms."
   },
   {
     question: "What type of content should I create?",
-    answer: "Short-form vertical videos (9:16), ideally 1-2 minutes long. iPhone only, talking-to-camera style. Clip-on mic encouraged if available. Share your real menopause or perimenopause experience in an honest, relatable way.",
-    popular: true
+    answer: "Short-form vertical video (9:16), 1 to 2 minutes, shot on iPhone in a talking-to-camera style. Clip-on mic encouraged. We want authentic, relatable stories about your menopause or perimenopause journey. For full creative direction, format guidelines, and best practices, check out our Fountain Creator Collaboration Guide.",
+    popular: true,
+    link: {
+      url: "https://docs.google.com/document/d/1wm-Elas9v_AxYyQ8s_uSBmMR006m4bp4JOZO_WWqrls/edit?tab=t.0#heading=h.ym7tbpd1idz4",
+      label: "Open the Fountain Creator Collaboration Guide"
+    }
   },
   {
     question: "What are the required talking points?",
@@ -209,7 +213,7 @@ const faqs = [
 ]
 
 // FAQ Item Component
-function FAQItem({ question, answer, popular }) {
+function FAQItem({ question, answer, popular, link }) {
   const [isOpen, setIsOpen] = useState(false)
   
   return (
@@ -223,6 +227,11 @@ function FAQItem({ question, answer, popular }) {
       </button>
       <div className="faq-answer">
         <p>{answer}</p>
+        {link && (
+          <a href={link.url} target="_blank" rel="noopener noreferrer" className="faq-answer-link">
+            {link.label}
+          </a>
+        )}
       </div>
     </div>
   )
@@ -319,7 +328,7 @@ function App() {
         </div>
       </section>
 
-      {/* Hear from our influencers - UGC */}
+      {/* Hear from our influencers UGC */}
       <section className="section section-influencers" id="influencers">
         <div className="container">
           <AnimatedSection>
@@ -330,20 +339,35 @@ function App() {
           </AnimatedSection>
           <div className="ugc-grid">
             <AnimatedSection delay={100}>
-              <a href="https://www.tiktok.com/@meg.marie.ugc/video/7597801480120257806" target="_blank" rel="noopener noreferrer" className="ugc-card">
-                <span className="ugc-platform"><Icons.TikTok /></span>
-                <h3>@meg.marie.ugc</h3>
-                <p>Watch on TikTok</p>
-              </a>
+              <div className="ugc-embed-wrap">
+                <span className="ugc-embed-label">@meg.marie.ugc</span>
+                <iframe
+                  src="https://www.tiktok.com/player/v1/7597801480120257806?autoplay=1"
+                  className="ugc-embed"
+                  title="TikTok video by @meg.marie.ugc"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <a href="https://www.facebook.com/share/v/1Cys1qfmMf/" target="_blank" rel="noopener noreferrer" className="ugc-card">
-                <span className="ugc-platform"><Icons.Facebook /></span>
-                <h3>Creator spotlight</h3>
-                <p>Watch on Facebook</p>
-              </a>
+              <div className="ugc-embed-wrap">
+                <span className="ugc-embed-label">Creator spotlight</span>
+                <iframe
+                  src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent('https://www.facebook.com/share/v/1Cys1qfmMf/')}&autoplay=1&show_text=false&width=500`}
+                  className="ugc-embed"
+                  title="Facebook creator video"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </AnimatedSection>
           </div>
+          <p className="ugc-grid-footer">
+            <a href="https://www.tiktok.com/@meg.marie.ugc/video/7597801480120257806" target="_blank" rel="noopener noreferrer">Watch on TikTok</a>
+            {' · '}
+            <a href="https://www.facebook.com/share/v/1Cys1qfmMf/" target="_blank" rel="noopener noreferrer">Watch on Facebook</a>
+          </p>
         </div>
       </section>
 
@@ -374,7 +398,7 @@ function App() {
                 <span className="benefit-number">02</span>
                 <div className="benefit-icon"><Icons.Team /></div>
                 <h3>Collaborative Process</h3>
-                <p>We review concepts before filming to avoid reshoots. Light feedback, minimal revisions—the goal isn't perfection, it's authenticity.</p>
+                <p>We review concepts before filming to avoid reshoots. Light feedback, minimal revisions. The goal isn't perfection, it's authenticity.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={300}>
@@ -382,7 +406,7 @@ function App() {
                 <span className="benefit-number">03</span>
                 <div className="benefit-icon"><Icons.Heart /></div>
                 <h3>Meaningful Content</h3>
-                <p>Help women discover hormone health solutions that actually work. 99% of Fountain patients use testosterone—something most clinics don't offer.</p>
+                <p>Help women discover hormone health solutions that actually work. 99% of Fountain patients use testosterone, something most clinics don't offer.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={400}>
@@ -413,7 +437,7 @@ function App() {
                 <div className="value-icon"><Icons.Patient /></div>
                 <h3>Testosterone Included</h3>
                 <p>
-                  99% of our patients use testosterone—essential for sex drive, motivation, bone health, and muscle retention. 
+                  99% of our patients use testosterone, essential for sex drive, motivation, bone health, and muscle retention. 
                   Most HRT clinics don't offer it. We built our business specifically to provide it.
                 </p>
               </div>
@@ -424,7 +448,7 @@ function App() {
                 <h3>The 12-Week Promise</h3>
                 <p>
                   Biweekly check-ins with personalized hormone adjustments. Within 12 weeks, every patient 
-                  reaches their ideal dose—one pill and one click per day.
+                  reaches their ideal dose, one pill and one click per day.
                 </p>
               </div>
             </AnimatedSection>
@@ -434,7 +458,7 @@ function App() {
                 <h3>Custom-Tailored Care</h3>
                 <p>
                   Not one-size-fits-all. Treatments may include testosterone, estrogen, progesterone, 
-                  and vaginal estrogen—adjusted specifically for perimenopausal or menopausal needs.
+                  and vaginal estrogen, adjusted specifically for perimenopausal or menopausal needs.
                 </p>
               </div>
             </AnimatedSection>
@@ -509,7 +533,7 @@ function App() {
               <span className="section-label">Content Guidelines</span>
               <h2 className="section-title">Tone & Style</h2>
               <p className="section-description">
-                Content should feel human and approachable—not overly polished, not overly salesy. 
+                Content should feel human and approachable, not overly polished, not overly salesy. 
                 A real person sharing something helpful, not a scripted ad.
               </p>
             </div>
@@ -623,7 +647,7 @@ function App() {
                 <p className="faq-no-results">No results found. Try a different search term.</p>
               ) : (
                 filteredFaqs.map((faq, index) => (
-                  <FAQItem key={index} question={faq.question} answer={faq.answer} popular={faq.popular} />
+                  <FAQItem key={index} question={faq.question} answer={faq.answer} popular={faq.popular} link={faq.link} />
                 ))
               )}
             </div>
