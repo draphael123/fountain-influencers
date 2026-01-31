@@ -5,36 +5,36 @@
 /* CSS Variables - Organized */
 :root,
 [data-theme="light"] {
-  /* Colors */
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-primary-light: #3b82f6;
-  --color-primary-glow: rgba(99, 102, 241, 0.4);
-  --color-accent: #0ea5e9;
-  --color-accent-light: #38bdf8;
-  --color-accent-glow: rgba(20, 184, 166, 0.3);
-  --color-accent-gold: #f59e0b;
+  /* Colors - Pink & White */
+  --color-primary: #db2777;
+  --color-primary-dark: #be185d;
+  --color-primary-light: #ec4899;
+  --color-primary-glow: rgba(219, 39, 119, 0.35);
+  --color-accent: #f472b6;
+  --color-accent-light: #f9a8d4;
+  --color-accent-glow: rgba(244, 114, 182, 0.3);
+  --color-accent-gold: #e11d48;
   --color-background: #ffffff;
-  --color-background-alt: #f8fafc;
-  --color-background-tinted: #eff6ff;
-  --color-bg-card-hover: #1f1f2e;
-  --color-text: #0f172a;
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-text-muted: #94a3b8;
+  --color-background-alt: #fdf2f8;
+  --color-background-tinted: #fce7f3;
+  --color-bg-card-hover: #fdf2f8;
+  --color-text: #1f2937;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
   --color-white: #ffffff;
   --color-card: #ffffff;
-  --color-border: #e2e8f0;
-  --color-border-hover: rgba(148, 163, 184, 0.24);
+  --color-border: #fbcfe8;
+  --color-border-hover: rgba(244, 114, 182, 0.3);
   --color-success: #22c55e;
   --color-error: #ef4444;
   
-  /* Dark mode specific */
+  /* Light theme specific */
   --header-bg: rgba(255, 255, 255, 0.95);
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --hero-shape-1: rgba(37, 99, 235, 0.1);
-  --hero-shape-2: rgba(14, 165, 233, 0.12);
-  --hero-shape-3: rgba(37, 99, 235, 0.06);
+  --shadow-color: rgba(0, 0, 0, 0.06);
+  --hero-shape-1: rgba(219, 39, 119, 0.08);
+  --hero-shape-2: rgba(244, 114, 182, 0.1);
+  --hero-shape-3: rgba(219, 39, 119, 0.05);
   
   /* Typography */
   --font-serif: 'Fraunces', Georgia, serif;
@@ -89,37 +89,37 @@
   --transition-slow: 400ms ease;
 }
 
-/* Dark Mode Theme */
+/* Dark Mode Theme - Pink & White feel (softer dark) */
 [data-theme="dark"] {
-  --color-primary: #3b82f6;
-  --color-primary-dark: #2563eb;
-  --color-primary-light: #60a5fa;
-  --color-primary-glow: rgba(59, 130, 246, 0.4);
-  --color-accent: #38bdf8;
-  --color-accent-light: #7dd3fc;
-  --color-accent-glow: rgba(56, 189, 248, 0.3);
-  --color-accent-gold: #fbbf24;
-  --color-background: #0f172a;
-  --color-background-alt: #1e293b;
-  --color-background-tinted: #1e293b;
-  --color-bg-card-hover: #1e293b;
-  --color-text: #f1f5f9;
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #64748b;
-  --color-white: #f8fafc;
-  --color-card: #1e293b;
-  --color-border: #334155;
-  --color-border-hover: rgba(148, 163, 184, 0.24);
+  --color-primary: #ec4899;
+  --color-primary-dark: #db2777;
+  --color-primary-light: #f472b6;
+  --color-primary-glow: rgba(236, 72, 153, 0.4);
+  --color-accent: #f9a8d4;
+  --color-accent-light: #fbcfe8;
+  --color-accent-glow: rgba(249, 168, 212, 0.3);
+  --color-accent-gold: #f472b6;
+  --color-background: #1a0f14;
+  --color-background-alt: #2d1b24;
+  --color-background-tinted: #3d2432;
+  --color-bg-card-hover: #2d1b24;
+  --color-text: #fce7f3;
+  --color-text-primary: #fce7f3;
+  --color-text-secondary: #f9a8d4;
+  --color-text-muted: #a78b9a;
+  --color-white: #fdf2f8;
+  --color-card: #2d1b24;
+  --color-border: #4c2d3d;
+  --color-border-hover: rgba(244, 114, 182, 0.25);
   --color-success: #4ade80;
   --color-error: #f87171;
   
   /* Dark mode specific */
-  --header-bg: rgba(15, 23, 42, 0.95);
+  --header-bg: rgba(26, 15, 20, 0.95);
   --shadow-color: rgba(0, 0, 0, 0.3);
-  --hero-shape-1: rgba(59, 130, 246, 0.15);
-  --hero-shape-2: rgba(56, 189, 248, 0.12);
-  --hero-shape-3: rgba(59, 130, 246, 0.1);
+  --hero-shape-1: rgba(236, 72, 153, 0.12);
+  --hero-shape-2: rgba(249, 168, 212, 0.1);
+  --hero-shape-3: rgba(236, 72, 153, 0.06);
   
   /* Typography */
   --font-serif: 'Fraunces', Georgia, serif;
@@ -297,12 +297,12 @@ p {
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-white);
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3), 0 0 20px var(--color-primary-glow);
+  box-shadow: 0 4px 16px rgba(219, 39, 119, 0.3), 0 0 20px var(--color-primary-glow);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4), 0 0 30px var(--color-primary-glow);
+  box-shadow: 0 6px 24px rgba(219, 39, 119, 0.4), 0 0 30px var(--color-primary-glow);
 }
 
 .btn-primary:hover svg {
@@ -311,13 +311,14 @@ p {
 
 .btn-secondary {
   background: var(--color-white);
-  color: var(--color-text);
-  border: 2px solid var(--color-border);
+  color: #1f2937;
+  border: 2px solid var(--color-primary);
+  font-weight: 600;
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
 }
 
 .btn-full {
@@ -994,12 +995,12 @@ p {
   text-align: center;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-white);
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3), 0 0 20px var(--color-primary-glow);
+  box-shadow: 0 4px 16px rgba(219, 39, 119, 0.3), 0 0 20px var(--color-primary-glow);
   transition: box-shadow var(--transition-base);
 }
 
 .main-card:hover {
-  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.4), 0 0 30px var(--color-primary-glow);
+  box-shadow: 0 8px 32px rgba(219, 39, 119, 0.4), 0 0 30px var(--color-primary-glow);
 }
 
 .main-card .compensation-icon {
@@ -1535,13 +1536,13 @@ p {
    FOOTER
    ========================================== */
 .footer {
-  background: var(--color-text);
-  color: var(--color-background);
+  background: #9d174d;
+  color: var(--color-white);
   padding: var(--spacing-2xl) 0 var(--spacing-lg);
 }
 
 [data-theme="dark"] .footer {
-  background: #020617;
+  background: #1a0f14;
 }
 
 .footer-content {
@@ -1575,15 +1576,15 @@ p {
 }
 
 .footer-brand .logo-text {
-  color: var(--color-background);
+  color: var(--color-white);
 }
 
 [data-theme="dark"] .footer-brand .logo-text {
-  color: #f1f5f9;
+  color: #fce7f3;
 }
 
 .footer-brand p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.9375rem;
   max-width: 300px;
 }

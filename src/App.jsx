@@ -626,13 +626,6 @@ function App() {
                   <a href="mailto:aryia@fountain.net">aryia@fountain.net</a>
                 </div>
               </div>
-              <div className="contact-method">
-                <div className="contact-icon"><Icons.Instagram /></div>
-                <div className="contact-details">
-                  <h4>DM Us on Instagram</h4>
-                  <a href="https://instagram.com/fountainvitality" target="_blank" rel="noopener noreferrer">@fountainvitality</a>
-                </div>
-              </div>
               <div className="contact-note">
                 <span className="contact-note-icon"><Icons.Support /></span>
                 <p>We typically respond within 24-48 hours. Looking forward to connecting!</p>
@@ -667,9 +660,9 @@ function App() {
               <h4>Follow Us</h4>
               <div className="social-icons">
                 <a href="#" aria-label="Instagram"><Icons.Instagram /></a>
-                <a href="#" aria-label="TikTok"><Icons.TikTok /></a>
+                <a href="https://www.tiktok.com/@meg.marie.ugc/video/7597801480120257806" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><Icons.TikTok /></a>
                 <a href="#" aria-label="YouTube"><Icons.YouTube /></a>
-                <a href="#" aria-label="Facebook"><Icons.Facebook /></a>
+                <a href="https://www.facebook.com/share/v/1Cys1qfmMf/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Icons.Facebook /></a>
               </div>
             </div>
           </div>
