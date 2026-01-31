@@ -183,7 +183,7 @@ const faqs = [
   },
   {
     question: "What platforms do you work with?",
-    answer: "It depends on the creator, but our team will direct them to the best platforms."
+    answer: "We match each creator with the right platforms for their audience and style. Our team will guide you to the best fit."
   },
   {
     question: "What type of content should I create?",
@@ -196,7 +196,11 @@ const faqs = [
   },
   {
     question: "What are the required talking points?",
-    answer: "You'll mention your custom discount link on camera, highlight the $32 evaluation with a provider who listens, and mention that treatment may include progesterone, testosterone, and estrogen. We'll provide all the details!"
+    answer: "You'll get the exact talking points during onboarding. For full details and examples, check out our Creator Collaboration Guide.",
+    link: {
+      url: "https://docs.google.com/document/d/1wm-Elas9v_AxYyQ8s_uSBmMR006m4bp4JOZO_WWqrls/edit?tab=t.0#heading=h.ym7tbpd1idz4",
+      label: "Open the Creator Collaboration Guide"
+    }
   },
   {
     question: "Do I need approval before filming?",
@@ -352,21 +356,21 @@ function App() {
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="ugc-embed-wrap">
-                <span className="ugc-embed-label">Creator spotlight</span>
+                <span className="ugc-embed-label">@theempoweredpause</span>
                 <iframe
-                  src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent('https://www.facebook.com/share/v/1Cys1qfmMf/')}&autoplay=1&show_text=false&width=500`}
+                  src="https://www.tiktok.com/player/v1/7597892627085757726?autoplay=1"
                   className="ugc-embed"
-                  title="Facebook creator video"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                  title="TikTok video by @theempoweredpause"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
             </AnimatedSection>
           </div>
           <p className="ugc-grid-footer">
-            <a href="https://www.tiktok.com/@meg.marie.ugc/video/7597801480120257806" target="_blank" rel="noopener noreferrer">Watch on TikTok</a>
+            <a href="https://www.tiktok.com/@meg.marie.ugc/video/7597801480120257806" target="_blank" rel="noopener noreferrer">Watch @meg.marie.ugc</a>
             {' · '}
-            <a href="https://www.facebook.com/share/v/1Cys1qfmMf/" target="_blank" rel="noopener noreferrer">Watch on Facebook</a>
+            <a href="https://www.tiktok.com/@theempoweredpause/video/7597892627085757726" target="_blank" rel="noopener noreferrer">Watch @theempoweredpause</a>
           </p>
         </div>
       </section>
