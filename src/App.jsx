@@ -183,7 +183,7 @@ const faqs = [
   },
   {
     question: "What platforms do you work with?",
-    answer: "This collaboration runs on TikTok and/or Facebook. Fountain may repost your content on our own social channels and may tag you when doing so."
+    answer: "It depends on the creator—but our team will direct them to the best platforms."
   },
   {
     question: "What type of content should I create?",
@@ -244,7 +244,7 @@ function App() {
 
   useEffect(() => {
     // Set dark mode permanently
-    document.documentElement.setAttribute('data-theme', 'dark')
+    document.documentElement.setAttribute('data-theme', 'light')
     
     const handleScroll = () => {
       setHeaderScrolled(window.scrollY > 50)
@@ -319,6 +319,34 @@ function App() {
         </div>
       </section>
 
+      {/* Hear from our influencers - UGC */}
+      <section className="section section-influencers" id="influencers">
+        <div className="container">
+          <AnimatedSection>
+            <div className="section-header">
+              <span className="section-label">Creator Stories</span>
+              <h2 className="section-title">Hear from our influencers</h2>
+            </div>
+          </AnimatedSection>
+          <div className="ugc-grid">
+            <AnimatedSection delay={100}>
+              <a href="https://www.tiktok.com/@meg.marie.ugc/video/7597801480120257806" target="_blank" rel="noopener noreferrer" className="ugc-card">
+                <span className="ugc-platform"><Icons.TikTok /></span>
+                <h3>@meg.marie.ugc</h3>
+                <p>Watch on TikTok</p>
+              </a>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <a href="https://www.facebook.com/share/v/1Cys1qfmMf/" target="_blank" rel="noopener noreferrer" className="ugc-card">
+                <span className="ugc-platform"><Icons.Facebook /></span>
+                <h3>Creator spotlight</h3>
+                <p>Watch on Facebook</p>
+              </a>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Why Partner Section */}
       <section id="benefits" className="section section-benefits">
         <div className="container">
@@ -327,8 +355,7 @@ function App() {
               <span className="section-label">Why Create With Us</span>
               <h2 className="section-title">Real Stories. Real Impact.</h2>
               <p className="section-description">
-                We're looking for creators who want to share authentic menopause and perimenopause experiences—
-                not scripted ads. Your voice, your story, your way.
+                We're looking for creators who want to share authentic menopause and perimenopause experiences, not scripted ads. Your voice, your story, your way.
               </p>
             </div>
           </AnimatedSection>
@@ -338,7 +365,7 @@ function App() {
               <div className="benefit-card">
                 <span className="benefit-number">01</span>
                 <div className="benefit-icon"><Icons.Creative /></div>
-                <h3>Full Creative Control</h3>
+                <h3>Creative Control</h3>
                 <p>Submit your content ideas and hooks for approval, then create in your authentic style. We trust you to know what resonates with your audience.</p>
               </div>
             </AnimatedSection>
@@ -555,7 +582,7 @@ function App() {
               <div className="process-step">
                 <div className="step-number">3</div>
                 <h3>Create Content</h3>
-                <p>Film your authentic video with full creative control</p>
+                <p>Film your authentic video with creative control</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={400}>
