@@ -1,3 +1,110 @@
+# Fountain Influencers – Full Source Code
+
+This file contains the complete source code for the project as of the current state.
+
+---
+
+## Project structure
+
+```
+fountain-influencers/
+├── index.html
+├── package.json
+├── vite.config.js
+├── src/
+│   ├── main.jsx
+│   ├── App.jsx
+│   └── index.css
+├── .gitignore
+├── guide.md
+├── README.md
+└── Fountain Creator Collaboration Guide.docx
+```
+
+---
+
+## index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Partner with Fountain Vitality - Join our influencer program and help people discover hormone health solutions." />
+    <title>Partner With Fountain Vitality | Influencer Program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+```
+
+---
+
+## package.json
+
+```json
+{
+  "name": "fountain-vitality-influencer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.12"
+  }
+}
+```
+
+---
+
+## vite.config.js
+
+```js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+})
+```
+
+---
+
+## src/main.jsx
+
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+```
+
+---
+
+## src/App.jsx
+
+```jsx
 import { useState, useEffect, useRef } from 'react'
 
 // Intersection Observer hook for scroll animations
@@ -161,25 +268,17 @@ const Icons = {
       <polyline points="19 12 12 19 5 12"/>
     </svg>
   ),
-  Search: () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="11" cy="11" r="8"/>
-      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-    </svg>
-  ),
 }
 
 
 const faqs = [
   {
     question: "Do I need to be a Fountain patient?",
-    answer: "No! While we love when partners have personal experience with hormone health, it's not required. If you're not personally going through the Fountain process, you may speak generally about Fountain as a solution. We'll guide you on appropriate phrasing.",
-    popular: true
+    answer: "No! While we love when partners have personal experience with hormone health, it's not required. If you're not personally going through the Fountain process, you may speak generally about Fountain as a solution. We'll guide you on appropriate phrasing."
   },
   {
     question: "How much creative freedom do I have?",
-    answer: "A lot. We provide key messages and guidelines, but you know your audience best. We want content that feels human and approachable—not overly polished, not overly salesy. Simple, clear, and natural is best.",
-    popular: true
+    answer: "A lot. We provide key messages and guidelines, but you know your audience best. We want content that feels human and approachable—not overly polished, not overly salesy. Simple, clear, and natural is best."
   },
   {
     question: "What platforms do you work with?",
@@ -187,8 +286,7 @@ const faqs = [
   },
   {
     question: "What type of content should I create?",
-    answer: "Short-form vertical videos (9:16), ideally 1-2 minutes long. iPhone only, talking-to-camera style. Clip-on mic encouraged if available. Share your real menopause or perimenopause experience in an honest, relatable way.",
-    popular: true
+    answer: "Short-form vertical videos (9:16), ideally 1-2 minutes long. iPhone only, talking-to-camera style. Clip-on mic encouraged if available. Share your real menopause or perimenopause experience in an honest, relatable way."
   },
   {
     question: "What are the required talking points?",
@@ -209,16 +307,13 @@ const faqs = [
 ]
 
 // FAQ Item Component
-function FAQItem({ question, answer, popular }) {
+function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false)
   
   return (
     <div className={`faq-item ${isOpen ? 'open' : ''}`}>
       <button className="faq-question" onClick={() => setIsOpen(!isOpen)}>
-        <span className="faq-question-text">
-          {question}
-          {popular && <span className="faq-popular-badge">Popular</span>}
-        </span>
+        <span>{question}</span>
         <span className="faq-icon"><Icons.ChevronDown /></span>
       </button>
       <div className="faq-answer">
@@ -231,16 +326,6 @@ function FAQItem({ question, answer, popular }) {
 // Main App Component
 function App() {
   const [headerScrolled, setHeaderScrolled] = useState(false)
-  const [faqSearch, setFaqSearch] = useState('')
-  const [activeTab, setActiveTab] = useState('dos')
-
-  const filteredFaqs = faqSearch.trim()
-    ? faqs.filter(
-        (faq) =>
-          faq.question.toLowerCase().includes(faqSearch.toLowerCase()) ||
-          faq.answer.toLowerCase().includes(faqSearch.toLowerCase())
-      )
-    : faqs
 
   useEffect(() => {
     // Set dark mode permanently
@@ -264,11 +349,8 @@ function App() {
       <header className={`header ${headerScrolled ? 'scrolled' : ''}`}>
         <div className="header-container">
           <div className="logo">
-            <img src="/logo.png" alt="Fountain" className="logo-image" onError={(e) => { e.target.style.display = 'none'; e.target.nextElementSibling?.style && (e.target.nextElementSibling.style.display = 'flex') }} />
-            <div className="logo-fallback" style={{ display: 'none' }}>
-              <span className="logo-icon">◈</span>
-              <span className="logo-text">Fountain</span>
-            </div>
+            <span className="logo-icon">◈</span>
+            <span className="logo-text">Fountain</span>
           </div>
           <nav className="nav">
             <button onClick={() => scrollToSection('benefits')}>Why Partner</button>
@@ -336,7 +418,6 @@ function App() {
           <div className="benefits-grid">
             <AnimatedSection delay={100}>
               <div className="benefit-card">
-                <span className="benefit-number">01</span>
                 <div className="benefit-icon"><Icons.Creative /></div>
                 <h3>Full Creative Control</h3>
                 <p>Submit your content ideas and hooks for approval, then create in your authentic style. We trust you to know what resonates with your audience.</p>
@@ -344,7 +425,6 @@ function App() {
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="benefit-card">
-                <span className="benefit-number">02</span>
                 <div className="benefit-icon"><Icons.Team /></div>
                 <h3>Collaborative Process</h3>
                 <p>We review concepts before filming to avoid reshoots. Light feedback, minimal revisions—the goal isn't perfection, it's authenticity.</p>
@@ -352,7 +432,6 @@ function App() {
             </AnimatedSection>
             <AnimatedSection delay={300}>
               <div className="benefit-card">
-                <span className="benefit-number">03</span>
                 <div className="benefit-icon"><Icons.Heart /></div>
                 <h3>Meaningful Content</h3>
                 <p>Help women discover hormone health solutions that actually work. 99% of Fountain patients use testosterone—something most clinics don't offer.</p>
@@ -360,7 +439,6 @@ function App() {
             </AnimatedSection>
             <AnimatedSection delay={400}>
               <div className="benefit-card">
-                <span className="benefit-number">04</span>
                 <div className="benefit-icon"><Icons.Lightning /></div>
                 <h3>Simple & Supported</h3>
                 <p>We provide all the info you need about Fountain's process, hormones, and key talking points. Ask questions early, share ideas freely.</p>
@@ -436,7 +514,6 @@ function App() {
                   <li><Icons.Check /> Your own custom discount link (fountain.net/yourname)</li>
                   <li><Icons.Check /> Content may be reposted on Fountain's channels</li>
                   <li><Icons.Check /> Long-term partnership opportunities</li>
-                  <li><Icons.Check /> Performance bonuses available</li>
                 </ul>
               </div>
             </AnimatedSection>
@@ -488,41 +565,31 @@ function App() {
             </div>
           </AnimatedSection>
 
-          <div className="tabs-header">
-            <button className={`tab-button ${activeTab === 'dos' ? 'active' : ''}`} onClick={() => setActiveTab('dos')}>
-              <Icons.Check /> What Works
-            </button>
-            <button className={`tab-button ${activeTab === 'donts' ? 'active' : ''}`} onClick={() => setActiveTab('donts')}>
-              <Icons.X /> Please Avoid
-            </button>
+          <div className="guidelines-grid">
+            <AnimatedSection delay={100}>
+              <div className="guideline-card dos">
+                <h3>What Works</h3>
+                <ul>
+                  <li><span className="icon-check"><Icons.Check /></span> Share personal tips and what's helped you</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Frame things as "what worked for me"</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Speak from your own experience</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Conversational, honest, natural delivery</li>
+                  <li><span className="icon-check"><Icons.Check /></span> Clear beginning, middle, and end</li>
+                </ul>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <div className="guideline-card donts">
+                <h3>Please Avoid</h3>
+                <ul>
+                  <li><span className="icon-x"><Icons.X /></span> Medical advice or diagnoses</li>
+                  <li><span className="icon-x"><Icons.X /></span> Weight-loss promises</li>
+                  <li><span className="icon-x"><Icons.X /></span> Speaking as a medical expert</li>
+                  <li><span className="icon-x"><Icons.X /></span> Broad statements like "every woman will experience this"</li>
+                </ul>
+              </div>
+            </AnimatedSection>
           </div>
-          <AnimatedSection delay={100}>
-            <div className="tab-panel">
-              {activeTab === 'dos' && (
-                <div className="guideline-card dos">
-                  <h3>What Works</h3>
-                  <ul>
-                    <li><span className="icon-check"><Icons.Check /></span> Share personal tips and what's helped you</li>
-                    <li><span className="icon-check"><Icons.Check /></span> Frame things as "what worked for me"</li>
-                    <li><span className="icon-check"><Icons.Check /></span> Speak from your own experience</li>
-                    <li><span className="icon-check"><Icons.Check /></span> Conversational, honest, natural delivery</li>
-                    <li><span className="icon-check"><Icons.Check /></span> Clear beginning, middle, and end</li>
-                  </ul>
-                </div>
-              )}
-              {activeTab === 'donts' && (
-                <div className="guideline-card donts">
-                  <h3>Please Avoid</h3>
-                  <ul>
-                    <li><span className="icon-x"><Icons.X /></span> Medical advice or diagnoses</li>
-                    <li><span className="icon-x"><Icons.X /></span> Weight-loss promises</li>
-                    <li><span className="icon-x"><Icons.X /></span> Speaking as a medical expert</li>
-                    <li><span className="icon-x"><Icons.X /></span> Broad statements like "every woman will experience this"</li>
-                  </ul>
-                </div>
-              )}
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
@@ -579,26 +646,11 @@ function App() {
             </div>
           </AnimatedSection>
 
-          <div className="faq-search-wrap">
-            <span className="faq-search-icon" aria-hidden><Icons.Search /></span>
-            <input
-              type="search"
-              className="faq-search"
-              placeholder="Search FAQs..."
-              value={faqSearch}
-              onChange={(e) => setFaqSearch(e.target.value)}
-              aria-label="Search FAQs"
-            />
-          </div>
           <AnimatedSection delay={100}>
             <div className="faq-container">
-              {filteredFaqs.length === 0 ? (
-                <p className="faq-no-results">No results found. Try a different search term.</p>
-              ) : (
-                filteredFaqs.map((faq, index) => (
-                  <FAQItem key={index} question={faq.question} answer={faq.answer} popular={faq.popular} />
-                ))
-              )}
+              {faqs.map((faq, index) => (
+                <FAQItem key={index} question={faq.question} answer={faq.answer} />
+              ))}
             </div>
           </AnimatedSection>
         </div>
@@ -634,7 +686,6 @@ function App() {
                 </div>
               </div>
               <div className="contact-note">
-                <span className="contact-note-icon"><Icons.Support /></span>
                 <p>We typically respond within 24-48 hours. Looking forward to connecting!</p>
               </div>
             </div>
@@ -648,11 +699,8 @@ function App() {
           <div className="footer-content">
             <div className="footer-brand">
               <div className="logo">
-                <img src="/logo.png" alt="Fountain" className="logo-image" onError={(e) => { e.target.style.display = 'none'; e.target.nextElementSibling?.style && (e.target.nextElementSibling.style.display = 'flex') }} />
-                <div className="logo-fallback" style={{ display: 'none' }}>
-                  <span className="logo-icon">◈</span>
-                  <span className="logo-text">Fountain</span>
-                </div>
+                <span className="logo-icon">◈</span>
+                <span className="logo-text">Fountain</span>
               </div>
               <p>Helping women reclaim their energy, clarity, and quality of life through personalized hormone therapy.</p>
             </div>
@@ -683,4 +731,31 @@ function App() {
 }
 
 export default App
+```
 
+## src/index.css
+
+Open **SOURCE-CODE.md** in Cursor: the full `index.css` is in your project at **src/index.css**. In the file explorer, open **src/index.css** and copy all (Cmd+A, Cmd+C), then paste into Claude after the App.jsx.  
+Alternatively, open **src/App.jsx** and **src/index.css** in Cursor and copy each file’s contents into Claude in two messages.
+
+---
+
+## How to give this code to Claude
+
+**Option 1 – Paste into Claude**  
+1. Open `src/App.jsx` and `src/index.css` in your editor.  
+2. Copy all of **App.jsx**, then in a new Claude conversation paste it and say: *"This is src/App.jsx for a Fountain influencer landing page (React + Vite)."*  
+3. In the same or next message, paste **index.css** and say: *"This is src/index.css, the styles for that project."*  
+4. If needed, paste **index.html**, **src/main.jsx**, **package.json**, and **vite.config.js** (all are short) so Claude has the full project.
+
+**Option 2 – Attach files (if your Claude app supports uploads)**  
+Upload `src/App.jsx`, `src/index.css`, and optionally the other files above. Then say: *"This is the Fountain influencer landing page. App.jsx is the main React component, index.css has all styles."*
+
+**Option 3 – Use this SOURCE-CODE.md**  
+This file already contains **index.html**, **package.json**, **vite.config.js**, and **main.jsx** in full above. Open **SOURCE-CODE.md**, copy everything, and paste into Claude. Then separately paste **src/App.jsx** and **src/index.css** (or attach them). That gives Claude the full codebase.
+
+**Quick reference for Claude:**  
+- Main app: `src/App.jsx`  
+- All styles: `src/index.css`  
+- Entry: `index.html`, `src/main.jsx`  
+- Config: `package.json`, `vite.config.js`
